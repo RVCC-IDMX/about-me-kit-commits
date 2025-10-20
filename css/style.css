@@ -1,5 +1,52 @@
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    background: #eaf2fb;
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+}
+
 header {
+    background: #97cbf7;
+    color: rgb(15, 1, 52);
+    padding: 1rem;
     text-align: center;
-    padding: 20px;
-    background-color: #69daf7;
+}
+
+main {
+    padding: 4rem;
+    text-align: center;
+}
+
+img {
+    max-width: 300px;
+    border-radius: 50%;
+
+    display: block; /* Makes the image a block-level element */
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+footer {
+    background: #97cbf7;
+    color: rgb(15, 1, 52);
+    padding: 1rem;
+    text-align: center;
 }
