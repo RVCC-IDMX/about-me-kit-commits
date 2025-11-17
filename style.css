@@ -1,50 +1,207 @@
+/* -------------------------
+   Global
+-------------------------- */
+
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-    background: #eaf2fb;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #eaf2fb;
+  color: #1b1b1b;
 }
 
-h1{
-    font-family: 'Oswald', sans-serif;
-}
-
-header {
-    background: #97cbf7;
-    color: rgb(15, 1, 52);
-    padding: 1rem;
-    text-align: center;
-}
-
-main {
-    padding: 4rem;
-    text-align: center;
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
 }
 
 img {
-    max-width: 300px;
-    border-radius: 50%;
+  max-width: 100%;
+  display: block;
+}
 
-    display: block; /* Makes the image a block-level element */
-    margin-left: auto;
-    margin-right: auto;
+/* -------------------------
+   Header
+-------------------------- */
 
-    padding: 2rem;
+header {
+  background: #97cbf7;
+  padding: 1rem;
+  text-align: center;
+}
+
+header img {
+  width: 96px;
+  margin: 0 auto;
+}
+
+/* -------------------------
+   Layout
+-------------------------- */
+
+main {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 section {
-    margin-bottom: 1rem;
-    padding: 1rem;
+  margin-bottom: 2rem;
 }
 
-p {
-    font-size: 1.1rem;
+/* -------------------------
+   Hero Section
+-------------------------- */
+
+.hero figure img {
+  width: 260px;
+  border-radius: 50%;
+  margin: 1rem auto;
 }
+
+.hero figcaption {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* -------------------------
+   Contact Form
+-------------------------- */
+
+#contact {
+  background: #c5d1f5;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(17, 22, 43, 0.1);
+}
+
+#contact fieldset {
+  border: none;
+  background: #e7ecf8;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+#contact legend {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#contact label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+#contact input,
+#contact textarea,
+#contact select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #b9c3d6;
+  font-size: 1rem;
+}
+
+.radio-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.3rem;
+}
+
+.radio-list li {
+  margin: 0.3rem 0;
+}
+
+#contact button[type="submit"] {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#contact button:hover {
+  background: #005dc5;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #contact fieldset {
+    padding: 2rem;
+  }
+
+  #contact input,
+  #contact select,
+  #contact textarea {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop Form Grid */
+@media (min-width: 1025px) {
+  #contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  #contact textarea,
+  #contact .radio-list,
+  #contact button {
+    grid-column: span 2;
+  }
+}
+
+/* -------------------------
+   Gallery
+-------------------------- */
+
+.gallery figure {
+  margin-bottom: 2rem;
+}
+
+.gallery img {
+  border-radius: 10px;
+}
+
+/* -------------------------
+   Article
+-------------------------- */
+
+article {
+  background-color: #1e1e2f;
+  color: #f5f5f5;
+  padding: 20px 30px;
+  border-radius: 12px;
+  line-height: 1.7;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dropcap {
+  font-size: 2.7rem;
+  float: left;
+  font-weight: bold;
+  padding-right: 8px;
+  line-height: 0.9;
+  color: #ffcc00;
+}
+
+/* -------------------------
+   Footer
+-------------------------- */
 
 footer {
-    background: #97cbf7;
-    color: rgb(15, 1, 52);
-    padding: 1rem;
-    text-align: center;
+  background: #97cbf7;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
 }

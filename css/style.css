@@ -134,6 +134,18 @@ section {
   background: #005dc5;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  #contact fieldset {
+    padding: 2rem;
+  }
+
+  #contact input,
+  #contact select,
+  #contact textarea {
+    font-size: 1.1rem;
+  }
+}
+
 /* Desktop Form Grid */
 @media (min-width: 1025px) {
   #contact form {
