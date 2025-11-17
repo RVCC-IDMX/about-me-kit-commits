@@ -2,27 +2,17 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Link to external stylesheet-->
+        <link rel="stylesheet" href="style.css" />
 
-        <link rel="stylesheet" href="style.css">
-
-        <!-- Header and body font-->
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-            rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
-            rel="stylesheet">
-
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Open+Sans:wght@300;400;600;700&display=swap"
+            rel="stylesheet" />
 
         <title>About Me</title>
     </head>
@@ -40,14 +30,14 @@
 
         <main>
             <!-- The main envelops important page content -->
-            <section>
-                <img src="img/avataaars.png" alt="Avatar picture of me">
-
-                <div>
-                    <p>Kaitlin Taylor</p>
-                    <p>New Jersey</p>
-                </div>
-                <!-- Close the hero section -->
+            <section class="hero">
+                <figure>
+                    <img src="img/avataaars.png" alt="Avatar illustration" />
+                    <figcaption>
+                        <p class="name">Kaitlin Taylor</p>
+                        <p class="location">New Jersey</p>
+                    </figcaption>
+                </figure>
             </section>
 
             <!-- Markup Section -->
@@ -82,8 +72,9 @@
                             rows="4"></textarea>
 
                         <!-- Follow-up radio buttons -->
-                        <p>Would you like a follow-up?</p>
-                        <ul>
+                        <p class="followup-label">Would you like a follow-up?
+                        </p>
+                        <ul class="radio-list">
                             <li>
                                 <label>
                                     <input type="radio" name="followup"
@@ -123,67 +114,42 @@
 
                 <h2> Photo Gallery</h2>
 
-                <div class="photo">
-
-                    <img src="img/dog-640w.jpg" alt="My dog">
+                <figure>
+                    <img src="img/dog-640w.jpg" alt="My dog" />
                     <figcaption>My Dog</figcaption>
+                </figure>
 
-                </div>
-
-                <div class="caption">
-                    <p>Image One.</p>
-                </div>
-
-                <div class="photo">
-
-                    <img src="img/books-cat-640w.jpg" alt="Cat reading books">
+                <figure>
+                    <img src="img/books-cat-640w.jpg" alt="Cat reading books" />
                     <figcaption>Cat reading books</figcaption>
+                </figure>
 
-                </div>
-
-                <div class="caption">
-                    <p>Image Two.</p>
-                </div>
-
-                <div class="photo">
-
-                    <img src="img/drawing-640w.jpg" alt="Drawings">
+                <figure>
+                    <img src="img/drawing-640w.jpg" alt="Drawings" />
                     <figcaption>Drawings</figcaption>
-
-                </div>
-
-                <div class="caption">
-                    <p>Image Three.</p>
-                </div>
-
+                </figure>
             </section>
 
+
+            <!-- New Image Section -->
             <section>
-                <h2> New Images </h2>
-
-                <hr>
+                <h2>New Images</h2>
+                <hr />
 
                 <figure>
-
-                    <img src="img/books-cat-640w.jpg" alt="Cat reading books">
+                    <img src="img/books-cat-640w.jpg" alt="Cat reading books" />
                     <figcaption>Cat reading books</figcaption>
-
                 </figure>
 
                 <figure>
-
-                    <img src="img/dog-640w.jpg" alt="My dog">
+                    <img src="img/dog-640w.jpg" alt="My dog" />
                     <figcaption>My Dog</figcaption>
-
                 </figure>
 
                 <figure>
-
-                    <img src="img/drawing-640w.jpg" alt="Drawings">
+                    <img src="img/drawing-640w.jpg" alt="Drawings" />
                     <figcaption>Drawings</figcaption>
-
                 </figure>
-
             </section>
 
             <article>
@@ -219,19 +185,19 @@
                 </div>
             </article>
 
-            <section>
+            <section class="bio">
+                <h2> About Me </h2>
                 <!--Bio Section: Personal Info-->
-                <div>
-                    <p>I work as a UI/UX designer</p>
-                    <p>I also do mobile app development</p>
-                    <p>I used to live and work in New York City</p>
-                    <p>I am currently working on an app development
-                        project for
-                        a client under an NDA agreement.</p>
 
-                    <p>My portfolio can be viewed here:
-                        www.kaitlintaylorportfolio.com</p>
-                </div>
+                <p>I work as a UI/UX designer</p>
+                <p>I also do mobile app development</p>
+                <p>I used to live and work in New York City</p>
+                <p>I am currently working on an app development
+                    project for
+                    a client under an NDA agreement.</p>
+
+                <p>My portfolio can be viewed here:
+                    www.kaitlintaylorportfolio.com</p>
 
             </section>
 

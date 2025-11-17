@@ -1,257 +1,195 @@
+/* -------------------------
+   Global
+-------------------------- */
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-    background: #eaf2fb;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #eaf2fb;
+  color: #1b1b1b;
 }
 
-h1{
-    font-family: 'Oswald', sans-serif;
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
 }
 
-ul li {
-    padding: 12px 16px;
-    border-bottom: #0c5a9f 1px solid;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #1b1b1b;
-    position: relative;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-section h2 {
-  color: #333;
-  font-size: 1.5rem;
+/* -------------------------
+   Header
+-------------------------- */
+
+header {
+  background: #97cbf7;
+  padding: 1rem;
   text-align: center;
-  margin-bottom: 10px;
 }
 
-/* Conact Form Styles */
+header img {
+  width: 96px;
+  margin: 0 auto;
+}
 
-#contact{
-  max-width: 600px;
-  margin: 0 auto 40px;
-  padding: 20px;
-  background-color: #c5d1f5;
-  border-radius: 8px;
+/* -------------------------
+   Layout
+-------------------------- */
+
+main {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* -------------------------
+   Hero Section
+-------------------------- */
+
+.hero figure img {
+  width: 260px;
+  border-radius: 50%;
+  margin: 1rem auto;
+}
+
+.hero figcaption {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* -------------------------
+   Contact Form
+-------------------------- */
+
+#contact {
+  background: #c5d1f5;
+  padding: 24px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(17, 22, 43, 0.1);
 }
 
-#contact h2{
-  text-align: center;
-  margin-bottom: 20px;
+#contact fieldset {
+  border: none;
+  background: #e7ecf8;
+  padding: 1.5rem;
+  border-radius: 12px;
 }
 
-#contact fieldset{
-    border: none;
-    margin-bottom: 15px;
-    background: #e7ecf8; /* adjust to match your theme */
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(30, 30, 30, 0.08);
+#contact legend {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-#contact legend{
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-#contact label{
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
+#contact label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
 }
 
 #contact input,
 #contact textarea,
 #contact select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #b9c3d6;
+  font-size: 1rem;
 }
 
-#contact textarea {
-    resize: vertical;
-    min-height: 100px;
+.radio-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.3rem;
+}
+
+.radio-list li {
+  margin: 0.3rem 0;
 }
 
 #contact button[type="submit"] {
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-#contact button[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-#contact ul {
-  list-style: none;
-  padding: 0;
-  margin-top: .5rem;
-}
-
-#contact ul li {
-  margin: .25rem 0;
-}
-
-/* Horizontal line */
-section hr {
-  border: none;
-  border-top: 2px solid #007BFF;
-  width: 50%;
-  margin: 10px auto 20px;
-}
-
-figure {
-  text-align: center;
-  margin: 0 0 20px 0;
-}
-
-figure img {
+  margin-top: 1.5rem;
   width: 100%;
+  padding: 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#contact button:hover {
+  background: #005dc5;
+}
+
+/* Desktop Form Grid */
+@media (min-width: 1025px) {
+  #contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  #contact textarea,
+  #contact .radio-list,
+  #contact button {
+    grid-column: span 2;
+  }
+}
+
+/* -------------------------
+   Gallery
+-------------------------- */
+
+.gallery figure {
+  margin-bottom: 2rem;
+}
+
+.gallery img {
   border-radius: 10px;
 }
 
-figcaption {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 8px;
-}
-
-header {
-    background: #97cbf7;
-    color: rgb(15, 1, 52);
-    padding: 1rem;
-    text-align: center;
-}
-
-main {
-    padding: 4rem;
-    text-align: center;
-}
-
-img {
-    max-width: 300px;
-    border-radius: 50%;
-
-    display: block; /* Makes the image a block-level element */
-    margin-left: auto;
-    margin-right: auto;
-
-    padding: 2rem;
-}
-
-section {
-    margin-bottom: 1rem;
-    padding: 1rem;
-}
-
-p {
-    font-size: 1.1rem;
-}
-
-footer {
-    background: #97cbf7;
-    color: rgb(15, 1, 52);
-    padding: 1rem;
-    text-align: center;
-}
+/* -------------------------
+   Article
+-------------------------- */
 
 article {
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 20px 30px;
-    background-color: #1e1e2f;
-    color: #f5f5f5;
-    font-family: "Georgia", serif;
-    line-height: 1.7;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  }
+  background-color: #1e1e2f;
+  color: #f5f5f5;
+  padding: 20px 30px;
+  border-radius: 12px;
+  line-height: 1.7;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 
-   div p {
-    margin-bottom: 16px;
-    text-indent: 1.5em;
-  }
+.dropcap {
+  font-size: 2.7rem;
+  float: left;
+  font-weight: bold;
+  padding-right: 8px;
+  line-height: 0.9;
+  color: #ffcc00;
+}
 
-  div p:first-of-type::first-letter {
-    font-size: 2.5rem;
-    font-weight: bold;
-    float: left;
-    line-height: 1;
-    padding-right: 8px;
-    color: #ffcc00;
-  }
+/* -------------------------
+   Footer
+-------------------------- */
 
-  /* Responsive Design */
-
-    @media (max-width: 414px) {
-
-       #contact fieldset {
-            padding: 1.25rem;
-        }
-
-        #contact button[type="submit"] {
-            font-size: 1.1rem;
-        }
-
-    }
-
-        @media (min-width: 768px) and (max-width: 1024px) {
-
-            #contact fieldset {
-                padding: 1.4rem;
-            }
-
-            #contact button[type="submit"] {
-                font-size: 1.15rem;
-            }
-
-             #contact input,
-             #contact select,
-             #contact textarea {
-                font-size: 1.1rem;
-             }
-
-        }
-
-@media (min-width: 1025px) {
-
-    #contact fieldset {
-        padding: 1.5rem;
-    }
-
-    #contact button[type="submit"] {
-        font-size: 1.2rem;
-    }
-
-      #contact form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-      }
-
-     #contact input,
-     #contact select,
-     #contact ul,
-     #contact button[type="submit"]
-     #contact textarea {
-        font-size: 1.2rem;
-        grid-column: span 2;
-     }
-
+footer {
+  background: #97cbf7;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
 }
