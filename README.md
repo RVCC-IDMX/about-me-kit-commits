@@ -37,6 +37,8 @@
 # Citations Section: For the Quote from Dracula:
 # Stoker, Bram. Dracula. Archibald Constable and Company, 1897.
 
+# Updated the image gallery so that it is cleaner and has a hover effect. 
+
 # A Note on What Liscense to release this content under
 # Creative Commons Attribution-Non-Commercial 4.0 (CC BY-NC 4.0)
 # What does this copyright do?-=-=-=
