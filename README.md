@@ -60,3 +60,8 @@
 # MDM Web Docs on Z Index
 # MDM - Stacking Context
 # Web.Dev - Z-Index and Stacking Contexts
+
+# The Nav bar has been built with a flexible site header 
+# The way the nav bar is formatted ensures clean alignment
+# and also responsive sizing. 
+# The hamburger menu is responsive to both web and mobile. 
