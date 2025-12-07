@@ -20,13 +20,35 @@
     <body>
 
         <!-- The body element contains all content shown to a visitor -->
+        <header class="site-header">
 
-        <header>
-            <!-- The header shows the logo and the page title-->
-            <img src="img/logo-96X96.svg" alt="Blue Origami Logo">
+            <div class="logo"><img src="img/LogoOne.svg" alt="MySite Logo">
+            </div>
 
-            <h1>Web Dev I</h1>
+            <!-- Hamburger -->
+            <button class="hamburger" id="hamburger">☰</button>
+
+            <!-- Navigation -->
+            <nav class="nav" id="navLinks">
+                <ul class="nav__menu">
+                    <li><a href="#">Bio</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </header>
+
+        <script>
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("navLinks");
+
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        </script>
+
+        <!-- Navbar -->
 
         <main>
             <!-- The main envelops important page content -->
@@ -34,8 +56,10 @@
                 <figure>
                     <img src="img/avataaars.png" alt="Avatar illustration" />
                     <figcaption>
-                        <p class="name">Kaitlin Taylor</p>
-                        <p class="location">New Jersey</p>
+                        <p class="name">Kaitlin Taylor
+                        </p>
+                        <p class="location">New Jersey
+                        </p>
                     </figcaption>
                 </figure>
             </section>
@@ -44,35 +68,43 @@
 
             <section id="contact">
 
-                <h2>Contact</h2>
-
                 <form method="post" data-netlify="true" name="contact">
                     <fieldset>
                         <legend> Contact Form </legend>
 
-                        <label for="name"> Name (required) </label>
+                        <label for="name"> Name
+                            (required) </label>
                         <input type="text" id="name" name="name" required>
 
-                        <label for="email"> Email (required) </label>
+                        <label for="email"> Email
+                            (required) </label>
                         <input type="email" id="email" name="email" required>
 
-                        <label for="phone">Phone (optional)</label>
+                        <label for="phone">Phone
+                            (optional)</label>
                         <input type="tel" id="phone" name="phone">
 
-                        <label for="phone-type">Phone Type (optional)</label>
+                        <label for="phone-type">Phone
+                            Type (optional)</label>
                         <select id="phone-type" name="phone-type">
-                            <option value="">-- Select Type --</option>
-                            <option value="mobile">Mobile</option>
-                            <option value="home">Home</option>
-                            <option value="work">Work</option>
+                            <option value="">-- Select
+                                Type --</option>
+                            <option value="mobile">
+                                Mobile</option>
+                            <option value="home">Home
+                            </option>
+                            <option value="work">Work
+                            </option>
                         </select>
 
-                        <label for="message"> Message </label>
+                        <label for="message"> Message
+                        </label>
                         <textarea id="message" name="message"
                             rows="4"></textarea>
 
                         <!-- Follow-up radio buttons -->
-                        <p class="followup-label">Would you like a follow-up?
+                        <p class="followup-label">Would
+                            you like a follow-up?
                         </p>
                         <ul class="radio-list">
                             <li>
@@ -97,7 +129,7 @@
 
             </section>
 
-            <!-- List -->
+            <!-- Hobbies Section -->
 
             <section class="hobbies">
 
@@ -108,7 +140,70 @@
                     <li> Drawing </li>
                 </ul>
 
+                <p>
+                    I enjoy spending time with my dog,
+                    reading a variety of
+                    books, and creating
+                    drawings in my free time. I like to
+                    read about
+                    cybersecurity, just so I have a
+                    “sense” of what the cyber landscape
+                    that is surrounding our
+                    lives is going to be
+                    like over the next few years. I also
+                    walk a certain number
+                    of miles everyday,
+                    based on some advice from a friend
+                    of mine who is in the
+                    U.S. Navy and has a
+                    security clearance. I love watching
+                    Phoebe Gate’s “the
+                    burnouts” Podcast,
+                    because it’s probably one of the
+                    most unfiltered,
+                    hysterical, and just real
+                    Podcasts about what the intersection
+                    of tech and business is
+                    really like in this
+                    day and age. I really enjoy learning
+                    about which cleaning
+                    supplies are best for
+                    which surfaces. I do like deep
+                    cleaning things. I know this
+                    sounds “weird”, but
+                    I was actually really excited to
+                    take the fabric off of a
+                    couch, vacuum the
+                    inside, and start to do some repair
+                    work. I also really
+                    enjoy listening to
+                    Q.104.3, the New York Classic Rock
+                    Station, and WPRB, the
+                    Princeton music
+                    station on the way to class. I also
+                    enjoy walks in the
+                    woods, it just feels like
+                    a calming place to be when “the lens
+                    of technology gets to
+                    be too much.”
+
+                <div class="profile-container">
+                    <img src="img/CoverPhoto.png" alt="Avatar illustration">
+                    <div class="profile-name">Kat</div>
+                </div>
+
+                </p>
+
+                <img src="img/avataaars.png" alt="Avatar illustration" />
+
+                <div class="profile-container">
+                    <img src="img/CoverPhoto.png" alt="Avatar illustration">
+                    <div class="profile-name">Kat</div>
+                </div>
+
             </section>
+
+            <!-- Photo Gallery Section -->
 
             <section class="gallery">
 
@@ -121,7 +216,8 @@
 
                 <figure>
                     <img src="img/books-cat-640w.jpg" alt="Cat reading books" />
-                    <figcaption>Cat reading books</figcaption>
+                    <figcaption>Cat reading books
+                    </figcaption>
                 </figure>
 
                 <figure>
@@ -130,58 +226,48 @@
                 </figure>
             </section>
 
-
-            <!-- New Image Section -->
-            <section>
-                <h2>New Images</h2>
-                <hr />
-
-                <figure>
-                    <img src="img/books-cat-640w.jpg" alt="Cat reading books" />
-                    <figcaption>Cat reading books</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="img/dog-640w.jpg" alt="My dog" />
-                    <figcaption>My Dog</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="img/drawing-640w.jpg" alt="Drawings" />
-                    <figcaption>Drawings</figcaption>
-                </figure>
-            </section>
-
+            <!-- Book Section -->
             <article>
                 <h2> Dracula-Brams Stoker </h2>
                 <div id="lit">
-                    <p> <span class="dropcap"> L </span> I am beginning to
+                    <p> <span class="dropcap"> L </span>
+                        I am beginning to
                         feel
                         this nocturnal existence tell on
                         me. It is destroying
-                        my nerve. I start at my own shadow, and am full of
+                        my nerve. I start at my own
+                        shadow, and am full of
                         all
                         sorts of horrible
-                        imaginings. God knows that there is ground for my
+                        imaginings. God knows that there
+                        is ground for my
                         terrible fear in this
-                        accursed place! I looked out over the beautiful
+                        accursed place! I looked out
+                        over the beautiful
                         expanse,
                         bathed in soft
-                        yellow moonlight till it was almost as light as day.
+                        yellow moonlight till it was
+                        almost as light as day.
                     </p>
 
-                    <p> <span class="dropcap"> L </span> The castle is on
+                    <p> <span class="dropcap"> L </span>
+                        The castle is on
                         the
-                        very edge of a terrible precipice. A
+                        very edge of a terrible
+                        precipice. A
                         stone falling from
-                        the window would fall a thousand feet without
+                        the window would fall a thousand
+                        feet without
                         touching
                         anything! As far as
-                        the eye can reach is a sea of green tree tops, with
+                        the eye can reach is a sea of
+                        green tree tops, with
                         occasionally a deep rift
-                        where there is a chasm. Here and there are silver
+                        where there is a chasm. Here and
+                        there are silver
                         threads where the rivers
-                        wind in deep gorges through the forests.</p>
+                        wind in deep gorges through the
+                        forests.</p>
                 </div>
             </article>
 
@@ -189,24 +275,494 @@
                 <h2> About Me </h2>
                 <!--Bio Section: Personal Info-->
 
-                <p>I work as a UI/UX designer</p>
-                <p>I also do mobile app development</p>
-                <p>I used to live and work in New York City</p>
-                <p>I am currently working on an app development
-                    project for
-                    a client under an NDA agreement.</p>
+                <p>I grew up around the Bell Labs area
+                    in New Jersey. I’ve met a
+                    really interesting
+                    assortment of Physics PhD students,
+                    mathematicians,
+                    developers, and professional
+                    designers over the years. I also
+                    grew up around a lot of
+                    people who worked on
+                    technology projects that were funded
+                    by the U.S. military
+                    and I’ve worked on a
+                    number of projects under NDA
+                    agreements, and I have learned
+                    the “real world”
+                    version of working with clients. One
+                    of the trends I’m
+                    seeing in the
+                    intersection of freelance developer
+                    work and cybersecurity
+                    work is an agreement
+                    that sometimes you learn to be more
+                    selective about what
+                    clients you will and
+                    will not work with not to be
+                    “snobby” or “pretentious”, it’s
+                    just that with the
+                    way that the cyber landscape is
+                    right now, you just have to
+                    be careful to not
+                    take on “just any client” for
+                    financial reasons. It’s ok to
+                    gradually learn how
+                    to make work that has a more
+                    widespread and commercial
+                    appeal. There’s no shame
+                    at all in starting to join projects,
+                    companies, and teams
+                    that are well funded.
+                    There’s no shame in being a
+                    developer who also looks at
+                    stock patterns. Some
+                    developers and designers have just
+                    seen enough of the “well
+                    that part of the
+                    internet is on fire today, anyways…”
+                    side of tech that
+                    “we’re just kind of in it
+                    for dog, lawn, immediate family
+                    members, and some close
+                    friends” at this point. </p>
+
+                <div class="profile-container">
+                    <img src="img/CoverPhoto.png" alt="Avatar illustration">
+                    <div class="profile-name">Kat</div>
+                </div>
+
 
                 <p>My portfolio can be viewed here:
                     www.kaitlintaylorportfolio.com</p>
 
             </section>
 
+            <section class="blog-articles">
+                <h2> Blog Articles </h2>
+
+                <article class="blog-article">
+                    <h3> The Rise of AI in Everyday Life
+                    </h3>
+                    <p>
+                        Artificial Intelligence (AI) is
+                        no longer a concept of
+                        the future; it has seamlessly
+                        integrated into our daily
+                        routines. From virtual
+                        assistants like Siri and Alexa
+                        to
+                        personalized recommendations on
+                        streaming platforms, AI
+                        is enhancing user experiences
+                        across various domains.
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> Sustainable Tech Innovations
+                    </h3>
+                    <p>
+                        We're still figuring out how to
+                        use AI *the right way*
+                        in an office situation. It's a
+                        really difficult balance
+                        between leveraging AI for
+                        productivity and ensuring data
+                        privacy and security. Companies
+                        are experimenting with
+                        different policies to find the
+                        best fit for their teams.
+
+                        The way AI is going to be
+                        utilized to fit teams together
+                        based on neurotype is where it's
+                        going to gets really
+                        interesting. Although I do
+                        wonder how much of that is
+                        going to be based on actual
+                        science versus just
+                        marketing buzzwords.
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> Cybersecurity in the Modern Age
+                    </h3>
+                    <p>
+                        As technology advances, so do
+                        the threats to our digital
+                        security. Cybersecurity has
+                        become a paramount concern
+                        for individuals and
+                        organizations alike. From
+                        phishing
+                        attacks to ransomware, the
+                        landscape of cyber threats is
+                        constantly evolving. Staying
+                        informed and adopting best
+                        practices is crucial in
+                        safeguarding sensitive
+                        information.
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> Offices Can Use AI Without
+                        Constant Surveillance </h3>
+                    <p>
+                        So there's actually *nice* ways
+                        in which AI can be used
+                        in an office setting without
+                        turning the workplace into
+                        a surveillance state. AI can be
+                        used to offer "soft
+                        coaching", like nudging an
+                        employee to take a break if
+                        they've been working for too
+                        long without a pause. It
+                        can also help with scheduling by
+                        suggesting optimal
+                        times
+                        for meetings based on team
+                        members' availability and
+                        productivity patterns. This can
+                        be done without *spying
+                        on
+                        every aspect of an employee's
+                        workday*.
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> Using AI Ethically For Office
+                        "Fits" </h3>
+                    <p>
+                        One of the best uses of AI in
+                        the office is to create
+                        teams based on Skills-Based Team
+                        Formation rather than
+                        "personality labeling". AI can
+                        be used to analyze a team
+                        member's current skillset [such
+                        as what tech stacks they
+                        are proficient in, what types of
+                        projects they have
+                        worked
+                        on, and what their learning
+                        style is] to create teams
+                        that
+                        complement each other's
+                        strengths and weaknesses. This
+                        approach can lead to more
+                        effective collaboration and
+                        better project outcomes.
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> AI and Team Building </h3>
+                    <p>
+                        An AI tool can be used to review
+                        project requirements.
+                        When used correctly, an AI tool
+                        can be used to pair
+                        teams together based on
+                        complementary tech skillsets.
+                        For example, do you have a
+                        front-end developer who is
+                        proficient in React but lacks
+                        back-end experience? An AI
+                        tool can be used to pair them
+                        with a back-end developer
+                        who is proficient in Node.js.
+                        Did your startup just pull
+                        in three UI/UX designers who
+                        have worked across the
+                        Fortune 500 space but have no
+                        experience with
+                        accessibility design? An AI tool
+                        can be used to pair
+                        them with a designer who has
+                        experience with
+                        accessibility design.
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> Tech & Prayers </h3>
+                    <p>
+                        Also, due to the..."less
+                        friendly"
+                        sides of tech teams and tech
+                        management [I have a friend
+                        who left a large tech company,
+                        and he
+                        found out the hard way that a
+                        bunch of people on another
+                        team hacked into his
+                        Linkedin and kept saying that he
+                        didn't know a tech
+                        stack that he built a whole
+                        project in for a company], AI
+                        can be used to help create
+                        teams that have a more
+                        balanced and healthy dynamic.
+                        This is why...it sometimes
+                        is a
+                        good idea to have past
+                        performance data that employees
+                        have
+                        *chosen* to share. When used
+                        correctly, AI can track
+                        project timelines and task
+                        distributions in a way that
+                        identifies overload or underuse.
+                        This can be done
+                        without reading
+                        private messages or emails, but
+                        rather by analyzing task
+                        assignments and completions.
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> AI for Skill-Based Team
+                        Formation </h3>
+                    <p>
+                        One of the best uses of AI in
+                        the office is to
+                        create
+                        teams based on Skills-Based Team
+                        Formation rather
+                        than
+                        "personality labeling". AI can
+                        be used to analyze a
+                        team
+                        member's current skillset [such
+                        as what tech stacks
+                        they
+                        are proficient in, what types of
+                        projects they have
+                        worked
+                        on, and what their learning
+                        style is] to create
+                        teams that
+                        complement each other's
+                        strengths and weaknesses.
+                        This
+                        approach can lead to more
+                        effective collaboration
+                        and
+                        better project outcomes.
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> Citations </h3>
+                    <p>
+                        A framework for ethical AI‑HRM
+                        development and use —
+
+                        SpringerLink
+
+                        Artificial intelligence and
+                        people management:
+
+                        ScienceDirect
+
+                        AI for the people? Embedding AI
+                        ethics in HR and people
+                        analytics projects —
+
+                        ScienceDirect+1
+                    </p>
+
+            </section>
+
+            <section class="blog-articles-two">
+                <h2> This blog Article is on Stacking
+                    with Z-index </h2>
+
+                <article class="blog-article">
+                    <h3> What is the z-index?
+                    </h3>
+                    <p>
+                        The z-index is a CSS property
+                        that controls the vertical
+                        stacking order of elements that
+                        overlap on a web page.
+                        It determines which elements
+                        appear in front of or
+                        behind others when they occupy
+                        the same space. The
+                        z-index is similar to layers in
+                        photoshop. The higher
+                        the
+                        z-index,the closer to the viewer
+                        the element appears.
+                        The lower the z-index,the
+                        further away from the
+                        viewer the content appears.
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> Why z-index matters as a job
+                        skill </h3>
+                    <p>
+                        These are the following reasons
+                        why z-index is an
+                        important job skill for web
+                        developers and designers to
+                        have.The z-index impacts
+                        dropdown menus,navigation bars,
+                        modals,pop-ups, side panels,
+                        tooltips, sticky headers,
+                        and image overlays.
+
+                        If a developer does not
+                        understand
+                        stacking, these features will
+                        oftentimes vanish,
+                        appear behind other content,
+                        block clicks, and
+                        break layouts.
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> Why do employers value z-index
+                        knowledge? </h3>
+                    <p>
+                        Build better user experiences:
+                        Understanding z-index.
+
+                        1. The z-index allows developers
+                        to create more
+                        usable and visually appealing
+                        interfaces by ensuring
+                        that
+                        important elements are always
+                        visible and accessible.
+
+                        2. Troubleshoot layout issues:
+                        Developers who
+                        understand z-index can quickly
+                        identify and resolve
+                        layout problems related to
+                        overlapping elements.
+
+                        3.The Z-index allows developers
+                        to ship professional
+                        quality UI/UX design work.
+
+                        4. Understanding the z-index
+                        will allow developers to
+                        avoid common front end bugs.
+                        Some common front end bugs
+                        that the z-index can help avoid
+                        include:
+                        dropdown menus that disappear
+                        behind other content,
+                        modals appearing behind the main
+                        page content, sticky
+                        headers covered by scrolling
+                        content, images overlaping
+                        text incorrectly, hover effects
+                        hidden behind elements,
+                        forms blocked by invisible
+                        layers, floating buttons
+                        hidden, toast notifications not
+                        available, video or ads
+                        overlapping UI controls, and
+                        tooltips that are hidden or
+                        misplaced.
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> What Do Recruiters Like To
+                        Listen For </h3>
+                    <p>
+                        "I used the z-index property to
+                        manage the stacking
+                        order of overlapping elements on
+                        a web page.I used
+                        z-index to fix modal stacking
+                        issues, create invisible
+                        dropdowns, fix blocked forms,and
+                        fix layering bugs
+                        caused by stacking contexts."
+                    </p>
+
+                    <p>
+                        "Where should you put your
+                        knowledge of z-indexes on
+                        your resume?"
+                        You can include your knowledge
+                        of z-indexes in the
+                        skills section of your resume.
+                        List it under
+                        "UI Layering and Debugging","CSS
+                        Stacking Contexts
+                        Control",
+                        "Z-Index Bug Fixing",and "Layout
+                        Visibility
+                        Troubleshooting".
+                    </p>
+                </article>
+
+                <br>
+
+                <article class="blog-article">
+                    <h3> Citations </h3>
+                    <p>
+
+                        MDN Web Docs on Z-Index
+
+                        MDM - Stacking Context
+
+                        Web.Dev - "Z-Index and Stacking
+                        Contexts"
+
+                    </p>
+
+            </section>
+
         </main>
+
+        <!-- Footer and Basic Contact Info Section -->
 
         <footer>
             <p>Now on Netlify!</p>
             <p> My name is Kaitlin Taylor</p>
-            <p> Copyright Kaitlin Taylor October 2025</p>
+            <p> Copyright Kaitlin Taylor October 2025
+            </p>
+            <p> https://github.com/RVCC-IDMX/about-me-kit-commits/tree/final-draft
+            </p>
         </footer>
 
     </body>

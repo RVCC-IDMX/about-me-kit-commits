@@ -1,209 +1,514 @@
 /* -------------------------
-   Global
+  Global
 -------------------------- */
 
+
 body {
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #eaf2fb;
-  color: #1b1b1b;
+ font-family: "Open Sans", sans-serif;
+ margin: 0;
+ padding: 0;
+ background: #eaf2fb;
+ color: #1b1b1b;
 }
+
 
 h1,
 h2 {
-  font-family: "Oswald", sans-serif;
+ font-family: "Oswald", sans-serif;
 }
+
 
 img {
-  max-width: 100%;
-  display: block;
+ max-width: 100%;
+ display: block;
 }
 
+
 /* -------------------------
-   Header
+  Header & Navigation
 -------------------------- */
 
-header {
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #97cbf7;
   padding: 1rem;
-  text-align: center;
+  color: white;
 }
 
-header img {
-  width: 96px;
-  margin: 0 auto;
+header {
+ background: #97cbf7;
+ padding: 1rem;
+ display: flex;
+ justify-content: center;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo img {
+  height: 150px;   /* controls logo size */
+  padding-right: 100px;
+  width: auto;
+}
+
+/* .navbar {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 1rem;
+} */
+
+/* Nav links */
+.nav__menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger button hidden by default */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav.active {
+    display: block;
+  }
+
+  .nav__menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+
+// Desktop view
+@media only screen and (min-width: 560px) {
+  .nav {
+    &__toggle {
+      display: none;
+    }
+
+    &__menu {
+      flex-direction: row;
+
+      li {
+        display: block;
+      }
+    }
+  }
+}
+
+
+/* Brand Logo + Title */
+.brand {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ color: #1b1b1b;
+}
+
+.brand img {
+ width: 60px;
+ height: auto;
+}
+
+.brand h1 {
+ font-size: 1.5rem;
+ margin: 0;
+}
+
+}
+
+/* Navigation Links */
+/* .navbar-links ul {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ margin: 0;
+ padding: 0;
+ gap: 1rem;
+ text-align: center;
+}
+
+.navbar-links ul li a {
+    color:#e7ecf8;
+    text-decoration: none;
+}
+
+.navbar-links a {
+ text-decoration: none;
+ color: #1b1b1b;
+ font-weight: 600;
+ padding: 8px 16px;
+ display: block;
+ border-radius: 6px;
+ transition: all 0.3s ease;
+ background: rgba(255, 255, 255, 0.3);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color:#eaf2fb;
+}
+
+.navbar-links a:hover {
+ background: #60a3d9;
+ color: white;
+ transform: scale(1.05);
+}
+
+/* Desktop navbar */
+@media (min-width: 768px) {
+ /* .navbar {
+   flex-direction: row;
+   justify-content: space-between;
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+
+ .navbar-links ul {
+   flex-direction: row;
+   gap: 1rem;
+ } */
+
+ .brand h1 {
+   font-size: 1.8rem;
+ }
+}
+
 
 /* -------------------------
-   Layout
+  Layout
 -------------------------- */
+
 
 main {
-  padding: 2rem 1rem;
-  max-width: 900px;
-  margin: 0 auto;
+ padding: 2rem 1rem;
+ max-width: 900px;
+ margin: 0 auto;
 }
+
 
 section {
-  margin-bottom: 2rem;
+ margin-bottom: 2rem;
 }
 
+
 /* -------------------------
-   Hero Section
+  Hero Section
 -------------------------- */
+
 
 .hero figure img {
-  width: 260px;
-  border-radius: 50%;
-  margin: 1rem auto;
+ width: 260px;
+ border-radius: 50%;
+ margin: 1rem auto;
 }
+
 
 .hero figcaption {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+ text-align: center;
+ font-size: 1.2rem;
+ margin-top: 0.5rem;
 }
 
+
 /* -------------------------
-   Contact Form
+  Contact Form
 -------------------------- */
 
+
 #contact {
-  background: #c5d1f5;
-  padding: 24px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(17, 22, 43, 0.1);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 80vh;
+
+ background: #c5d1f5;
+ padding: 2rem 1rem;
+ border-radius: 10px;
+ box-shadow: 0 2px 8px rgba(17, 22, 43, 0.1);
+
+ /* Centering the form */
+ /* max-width: 700px;       /* limits form width for readability */
+ /* margin: 2rem auto;      /* auto horizontal margins + vertical spacing */
+}
+
+#contact form {
+ width: 100%;
+ max-width: 600px;
+ background: #e7ecf8;
+ padding: 2rem;
+ border-radius: 12px;
+ box-shadow: 0 2px 8pm rgba(17, 22, 43, 0.1);
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
 }
 
 #contact fieldset {
-  border: none;
-  background: #e7ecf8;
-  padding: 1.5rem;
-  border-radius: 12px;
+ border: none;
+ background: #e7ecf8;
+ padding: 1.5rem;
+ border-radius: 12px;
+
+
+ /* Centering the form */       /* centers the form */
 }
 
 #contact legend {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+ font-size: 1.3rem;
+ font-weight: bold;
+ margin-bottom: 1rem;
 }
 
 #contact label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: 600;
+ display: block;
+ font-weight: 600;
 }
 
 #contact input,
 #contact textarea,
 #contact select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  border-radius: 6px;
-  border: 1px solid #b9c3d6;
-  font-size: 1rem;
+ width: 100%;
+ padding: 10px;
+ margin-top: 6px;
+ border-radius: 6px;
+ border: 1px solid #b9c3d6;
+ font-size: 1rem;
 }
 
 .radio-list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0.3rem;
+ list-style: none;
+ padding-left: 0;
+ margin-top: 0.3rem;
 }
 
 .radio-list li {
-  margin: 0.3rem 0;
+ margin: 0.3rem 0;
 }
 
 #contact button[type="submit"] {
-  margin-top: 1.5rem;
-  width: 100%;
-  padding: 1rem;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.2s ease;
+ margin-top: 1.5rem;
+ width: 100%;
+ padding: 1rem;
+ background: #007bff;
+ color: white;
+ border: none;
+ border-radius: 8px;
+ font-size: 1.1rem;
+ font-weight: 700;
+ cursor: pointer;
+ transition: 0.2s ease;
 }
 
-#contact button:hover {
-  background: #005dc5;
+contact button:hover {
+ background: #005dc5;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  #contact fieldset {
-    padding: 2rem;
-  }
+/* Mobile Form Grid */
 
-  #contact input,
-  #contact select,
-  #contact textarea {
-    font-size: 1.1rem;
-  }
+@media (max-width: 768px){
+
+   /*  .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 200px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #97cbf7;
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        gap: 1rem;
+    } */
+
+ #contact form {
+   padding: 2rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1.5rem;
+ }
 }
+
+ @media (max-width: 1024px) {
+
+    #contact form {
+        max-width: 500px;       /* controls width — adjust as needed */
+        margin: 0 auto;         /* centers the form */
+    }
+
+ }
+
+ #contact input,
+ #contact select,
+ #contact textarea {
+   font-size: 1.1rem;
+ }
+}
+
 
 /* Desktop Form Grid */
 @media (min-width: 1025px) {
 #contact form {
-    max-width: 700px;       /* controls width — adjust as needed */
-    margin: 0 auto;         /* centers the form */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
+   max-width: 700px;       /* controls width — adjust as needed */
+   margin: 0 auto;         /* centers the form */
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1.5rem;
+ }
 
-  #contact textarea,
-  #contact .radio-list,
-  #contact button[type="submit"] {
-    grid-column: span 2;
-  }
+
+ #contact textarea,
+ #contact .radio-list,
+ #contact button[type="submit"] {
+   grid-column: span 2;
+ }
 }
 
+
 /* -------------------------
-   Gallery
+  Gallery
 -------------------------- */
+
+
+.gallery {
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 1.5rem;
+ margin-bottom: 2rem;
+}
+
 
 .gallery figure {
-  margin-bottom: 2rem;
+ margin: 0;
+ overflow: hidden; /* Ensures rounded corners apply to images */
+ border-radius: 12px;
+ position: relative;
+ cursor: pointer;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ margin-bottom: 2rem;
 }
+
 
 .gallery img {
-  border-radius: 10px;
+ border-radius: 10px;
+ width: 100%;
+ display: block;
+ transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.gallery figure:hover {
+ transform: scale(1.03);
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery figure:hover img {
+ transform: scale(1.05);
+ opacity: 0.9;
+}
+
+.gallery figcaption {
+ position: absolute;
+ bottom: 0;
+ background: rgba(0, 0, 0, 0.6);
+ color: white;
+ width: 100%;
+ padding: 10px;
+ text-align: center;
+ font-size: 1rem;
+ opacity: 0;
+ transition: opacity 0.3s ease;
+}
+
+
+.gallery figure:hover figcaption {
+ opacity: 1;
+ color: #007bff;
+}
+
+
 /* -------------------------
-   Article
+  Article
 -------------------------- */
+
 
 article {
-  background-color: #1e1e2f;
-  color: #f5f5f5;
-  padding: 20px 30px;
-  border-radius: 12px;
-  line-height: 1.7;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+ background-color: #1e1e2f;
+ color: #f5f5f5;
+ padding: 20px 30px;
+ border-radius: 12px;
+ line-height: 1.7;
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
 
 .dropcap {
-  font-size: 2.7rem;
-  float: left;
-  font-weight: bold;
-  padding-right: 8px;
-  line-height: 0.9;
-  color: #ffcc00;
+ font-size: 2.7rem;
+ float: left;
+ font-weight: bold;
+ padding-right: 8px;
+ line-height: 0.9;
+ color: #ffcc00;
 }
 
+
 /* -------------------------
-   Footer
+  Footer
 -------------------------- */
 
+
 footer {
-  background: #97cbf7;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 3rem;
+ background: #97cbf7;
+ text-align: center;
+ padding: 1rem;
+ margin-top: 3rem;
 }
