@@ -44,5 +44,15 @@
 # What does this copyright do?-=-=-=
 # Others may share and adapt your content for non-commercial purposes only, and must give you credit.
 # Keeps your content free for learning and personal use while protecting it from commercial exploitation.
-It allows others to share and adapt content for non-commmercial purposes only, and they must give credit.
-It keeps the content free for learning and personal use, while also protecting it from commercial exploitation
+# It allows others to share and adapt content for non-commmercial purposes only, and they must give credit.
+# It keeps the content free for learning and personal use, while also protecting it from commercial exploitation
+
+# Citation One: A framework for ethical AI‑HRM development and use —
+# SpringerLink
+
+# Artificial Intelligence and People Management:
+# ScienceDirect
+
+# AI for the people? Embedding AI ethics in HR 
+# and people analytics projects - 
+# ScienceDirect +1
