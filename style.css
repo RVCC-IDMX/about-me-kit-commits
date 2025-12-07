@@ -23,6 +23,27 @@ img {
  display: block;
 }
 
+/* -------------------------
+    Formatting the Images
+   -------------------------- */
+
+   .profile-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.profile-container img {
+  width: 150px;      /* control size */
+  height: 150px;     /* must match width for circle */
+  object-fit: cover; /* crops nicely inside circle */
+  border-radius: 50%;
+  border: 3px solid #333; /* optional */
+}
+
+.profile-name {
+  margin-top: 8px;
+  font-weight: bold;
+}
 
 /* -------------------------
   Header & Navigation
