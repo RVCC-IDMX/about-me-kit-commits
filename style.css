@@ -36,8 +36,8 @@ img {
   align-items: center;
   display: inline-block;
 
-  width: 300px;      /* control size */
-  height: 300px;     /* must match width for circle */
+  width: 900px;      /* control size */
+  height: 900px;     /* must match width for circle */
   object-fit: cover; /* crops nicely inside circle */
   border-radius: 50%;
   border: 3px solid #333; /* optional */
